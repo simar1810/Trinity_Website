@@ -6,25 +6,25 @@ export default function Features() {
     const classes = [
         {
             title: "Balanced Food Diet Mastery",
-            desc: "A scientific framework combining ancient wisdom with modern nutrition to improve metabolism and long-term health.",
+            desc: "A low-carb diet focuses on reducing carbhydrate intake while increasing protein and healthy fats. Mastering this approch can help with weight management, blood sugar regulation, and overall health.",
             icon: <Apple className="w-8 h-8 text-[#FF6B6B]" />,
             isDark: true,
         },
         {
             title: "Mindful Eating Techniques",
-            desc: "Develop awareness around eating habits, reduce cravings, and enjoy meals without guilt.",
+            desc: "Mindful eating is about developing a healthy relationship with food by paying attention to the eating experience. It helps you understand hunger signals, avoid overeating, and enjoy your meals fully.",
             icon: <Brain className="w-8 h-8 text-[#84bd00]" />,
             isDark: false,
         },
         {
             title: "Stress Reduction Strategies",
-            desc: "Reduce stress using therapeutic techniques, breathwork, and structured daily routines.",
+            desc: "Stress impacts both mental and physical health, disrupting sleep, digestion, and overall well-being. Effective stress reduction techniques can improve your health and enhance the success of your nutrition plan.",
             icon: <Leaf className="w-8 h-8 text-[#4dabf7]" />,
             isDark: false,
         },
         {
             title: "Building Vishvoday",
-            desc: "Create a sustainable wellness mindset to support long-term physical and emotional balance.",
+            desc: "Vishvodaya are the foundation of sustainable wellness. Developing routines that align with your health goals ensures long-term success without falling into the trap of yo-yo dieting or unsustainable practices.",
             icon: <Zap className="w-8 h-8 text-[#FFC107]" />,
             isDark: true,
         },
@@ -87,9 +87,9 @@ export default function Features() {
                         {/* Feature Cards - Using Images and Left Aligned Text */}
                         <div className="flex gap-4 overflow-x-auto pb-4 no-scrollbar snap-x">
                             {[
-                                { title: "Mindfulness", desc: "Daily practice", img: "/assets/mindfulness.png" },
-                                { title: "Energy", desc: "Boost vitality", img: "/assets/mindfulness.png" },
-                                { title: "Balance", desc: "Life harmony", img: "/assets/mindfulness.png" }
+                                { title: "Nutritional Education", desc: "Prevention is better than cure.", img: "/assets/image1.png" },
+                                { title: "Preventative Care", desc: "Learn to make better dietary choices.", img: "/assets/image2.png" },
+                                { title: "Mind-Body Balance", desc: "Focus on Stress and emotional wellness.", img: "/assets/image3.png" }
                             ].map((pill, idx) => (
                                 <div
                                     key={idx}

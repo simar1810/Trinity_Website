@@ -2,23 +2,23 @@ export default function Process() {
     const steps = [
         {
             id: "01",
-            title: "Consultant Information & Assessment",
-            desc: "Tell us about your wellness goals, dietary preferences, and any constraints.",
+            title: "Sign Up & Get Personalized Assessment",
+            desc: "Tell us about your health goals, dietary preferences, and any medical history.",
         },
         {
             id: "02",
-            title: "Seamless Access to the Arogya Shakti",
+            title: "Get Instant Access to the Arogya Drishti",
             desc: "Get access to a personalized wellness regimen, resources, and expert guidance.",
         },
         {
             id: "03",
-            title: "Whole Body Transformation",
-            desc: "Track meaningful progress with regular check-ins and plan adjustments.",
+            title: "Follow Your Personalized Plan & Track Progress",
+            desc: "Get science-backed meal plans, expert consultations and real-time tracking.",
         },
         {
             id: "04",
             title: "Achieved a Healthier You!",
-            desc: "Reach your goals with confidence and maintain a sustainable lifestyle.",
+            desc: "Stay consistent with reminders, recipe recommendations, and expert advice",
         },
     ];
 
@@ -29,7 +29,7 @@ export default function Process() {
                 <div className="text-center mb-20">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">How it Works</h2>
                     <p className="text-gray-500 max-w-2xl mx-auto">
-                        Your journey is our priority. A path matched with the perfect plan.
+                        Your concerns are our priority - we craft the perfect plan to fit your needs.
                     </p>
                 </div>
 

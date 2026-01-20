@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 export default function Hero() {
     return (
-        <section className="relative w-full min-h-screen bg-[#111] overflow-hidden flex flex-col justify-between font-sans">
+        <section id="home" className="relative w-full min-h-screen bg-[#111] overflow-hidden flex flex-col justify-between font-sans">
             {/* Background Overlay & Image */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent z-10" />
@@ -23,11 +23,11 @@ export default function Hero() {
                         <span className="italic font-light text-[#e0e0e0]">Flow Into Balance</span>
                     </h1>
                     <p className="text-gray-200 text-lg md:text-xl mb-10 max-w-lg leading-relaxed shadow-sm">
-                        Transform your life with our comprehensive wellness programs. Rejuvenate your body, nourish your soul.
+                        Transform your health with customised nutrition, intelligent tools, and trusted expert advice.
                     </p>
-                    <button className="bg-[#84bd00] text-black font-bold px-10 py-4 rounded-full hover:bg-[#6a9c00] transition-colors shadow-[0_0_20px_rgba(132,189,0,0.4)]">
+                    {/* <button className="bg-[#84bd00] text-black font-bold px-10 py-4 rounded-full hover:bg-[#6a9c00] transition-colors shadow-[0_0_20px_rgba(132,189,0,0.4)]">
                         Start Free Trial
-                    </button>
+                    </button> */}
                 </div>
             </div>
 
@@ -35,15 +35,15 @@ export default function Hero() {
             <div className="relative z-10 bg-[#84bd00] w-full py-8 md:py-10 text-black">
                 <div className="container-custom grid grid-cols-3 divide-x divide-black/10 text-center">
                     <div className="px-2 md:px-4">
-                        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black mb-1">10,000</h3>
+                        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black mb-1">100</h3>
                         <p className="text-[10px] sm:text-xs md:text-sm lg:text-base font-semibold uppercase tracking-wider opacity-80 leading-tight">Life Impacts</p>
                     </div>
                     <div className="px-2 md:px-4">
-                        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black mb-1">5000+</h3>
+                        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black mb-1">10+</h3>
                         <p className="text-[10px] sm:text-xs md:text-sm lg:text-base font-semibold uppercase tracking-wider opacity-80 leading-tight">Personalized Plans</p>
                     </div>
                     <div className="px-2 md:px-4">
-                        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black mb-1">99%</h3>
+                        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black mb-1">97%</h3>
                         <p className="text-[10px] sm:text-xs md:text-sm lg:text-base font-semibold uppercase tracking-wider opacity-80 leading-tight">User Satisfaction</p>
                     </div>
                 </div>

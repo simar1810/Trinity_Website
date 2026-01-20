@@ -1,6 +1,6 @@
 export default function ContactForm() {
     return (
-        <section className="py-24 bg-gradient-to-b from-[#7ab300] to-[#5a8c00]">
+        <section id="contact" className="py-24 bg-gradient-to-b from-[#7ab300] to-[#5a8c00]">
             <div className="container-custom">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 drop-shadow-md">Let&apos;s Know You Better!</h2>

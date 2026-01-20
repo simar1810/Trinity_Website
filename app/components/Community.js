@@ -125,7 +125,7 @@ export default function Community() {
                             >
                                 {/* Single Image Card */}
                                 <div className="relative bg-gradient-to-br from-lime-50 to-white p-4 md:p-5 rounded-xl shadow-lg h-full">
-                                    {/* Main Image */}
+                                    {/* Main Image - Commented Out
                                     <div className="relative group">
                                         <div className={`relative overflow-hidden rounded-lg shadow-md ${CAROUSEL_ASPECT_MOBILE} ${CAROUSEL_ASPECT_DESKTOP}`}>
                                             <img
@@ -135,7 +135,7 @@ export default function Community() {
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
 
-                                            {/* Name overlay on image */}
+                                            {/* Name overlay on image }
                                             <div className="absolute bottom-3 left-3 right-3 text-white z-10">
                                                 <h3 className="text-base md:text-lg font-bold drop-shadow-lg">
                                                     {item.name}
@@ -143,7 +143,7 @@ export default function Community() {
                                             </div>
                                         </div>
                                     </div>
-
+                                    */}
                                     {/* Testimonial */}
                                     <div className="mt-3 text-center">
                                         <p className="text-lime-600 font-semibold text-xs md:text-sm mb-1">
