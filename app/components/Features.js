@@ -183,17 +183,17 @@ export default function Features() {
                             Why Choose Us
                         </span>
                         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                            Arogya <span className="text-[#84bd00]">Drishti</span>
+                            Trinity <span className="text-[#84bd00]">Nourishments</span>
                         </h2>
                         <p className="text-lg text-gray-600 mb-8 max-w-lg">
-                            We provide a structured, science-backed approach to wellness that fits seamlessly into your lifestyle. Experience the difference of expert care.
+                            Choose us for a step-by-step path to success, backed by professionals and a supportive network.
                         </p>
-                        <button className="flex items-center gap-3 bg-black hover:bg-[#84bd00] text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all duration-300 group">
+                        {/* <button className="flex items-center gap-3 bg-black hover:bg-[#84bd00] text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all duration-300 group">
                             Join Us Today
                             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                             </svg>
-                        </button>
+                        </button> */}
                     </div>
 
                     {/* Right: Feature List */}

@@ -7,7 +7,7 @@ export default function Process() {
         },
         {
             id: "02",
-            title: "Get Instant Access to the Arogya Drishti",
+            title: "Get Instant Access to the Trinity Nourishments",
             desc: "Get access to a personalized wellness regimen, resources, and expert guidance.",
         },
         {
