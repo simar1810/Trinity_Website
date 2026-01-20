@@ -19,76 +19,83 @@ export default function Process() {
             id: "04",
             title: "Achieved a Healthier You!",
             desc: "Reach your goals with confidence and maintain a sustainable lifestyle.",
-        }
+        },
     ];
 
     return (
         <section className="py-20 bg-white" id="process">
             <div className="container-custom">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">How its Works</h2>
-                    <p className="text-gray-500 max-w-2xl mx-auto">Your journey is our priority. A path matched the perfect plan so best of results.</p>
+                {/* Header */}
+                <div className="text-center mb-20">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">How it Works</h2>
+                    <p className="text-gray-500 max-w-2xl mx-auto">
+                        Your journey is our priority. A path matched with the perfect plan.
+                    </p>
                 </div>
 
-                <div className="relative flex flex-col gap-12 md:gap-0">
-                    {/* Central Line for Desktop */}
-                    <div className="hidden md:block absolute left-1/2 top-4 bottom-4 w-[1px] bg-dashed border-l border-gray-300 -translate-x-1/2"></div>
+                <div className="relative">
+                    {/* Center Line */}
+                    <div className="hidden md:block absolute left-1/2 top-0 h-full w-px border-l border-dashed border-gray-300 -translate-x-1/2" />
 
-                    {steps.map((step, index) => {
-                        const isEven = index % 2 === 1; // 0 index is odd visually (left), 1 index is even (right) . actually 0->Left, 1->Right
-                        // Wait, Design: 
-                        // 01 (Right Side Number, Left Content) ? Or Number is separate?
-                        // Let's assume standard ZigZag:
-                        // Row 1: Content Left, Number Right.
-                        // Row 2: Number Left, Content Right.
+                    <div className="flex flex-col gap-24">
+                        {steps.map((step, index) => {
+                            const isRight = index % 2 === 0; // 01 Right, 02 Left
 
-                        return (
-                            <div key={step.id} className="flex flex-col md:flex-row items-center w-full relative">
+                            return (
+                                <div
+                                    key={step.id}
+                                    className="relative grid md:grid-cols-[1fr_auto_1fr] items-center"
+                                >
+                                    {/* LEFT CARD (02, 04) */}
+                                    <div className="hidden md:flex justify-end pr-[56px]">
+                                        {isRight && (
+                                            <div className="relative max-w-md text-right">
+                                                <div className="bg-white p-8 rounded-xl shadow-lg border-r-4 border-[#84bd00]">
+                                                    <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+                                                    <p className="text-gray-500 text-sm">{step.desc}</p>
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
 
-                                {/* Left Side */}
-                                <div className={`w-full md:w-1/2 flex ${isEven ? 'justify-start md:pr-12' : 'justify-end md:pl-12'} order-2 md:order-1`}>
-                                    {/* If Even (Right Side Content), Left side is Number */}
-                                    {isEven ? (
-                                        <div className="md:text-right hidden md:block">
-                                            <span className="text-8xl font-bold text-stroke-1 opacity-20 select-none block leading-none">{step.id}</span>
+                                    {/* CENTER (DOT + NUMBER) */}
+                                    <div className="relative flex justify-center">
+                                        {/* Dot */}
+                                        <div className="hidden md:block w-4 h-4 rounded-full bg-[#84bd00] border-4 border-white shadow z-10" />
+
+                                        {/* Number (DESKTOP ONLY) */}
+                                        <span
+                                            className={`hidden md:block absolute top-1/2 -translate-y-1/2 text-[110px] font-bold text-gray-200 select-none
+                        ${isRight ? "left-[32px]" : "right-[32px]"}`}
+                                        >
+                                            {step.id}
+                                        </span>
+                                    </div>
+
+                                    {/* RIGHT CARD (01, 03) */}
+                                    <div className="hidden md:flex justify-start pl-[56px]">
+                                        {!isRight && (
+                                            <div className="relative max-w-md">
+                                                <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-[#84bd00]">
+                                                    <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+                                                    <p className="text-gray-500 text-sm">{step.desc}</p>
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    {/* MOBILE CARD (ONLY ONCE) */}
+                                    <div className="md:hidden relative pl-8 border-l-2 border-[#84bd00]/30">
+                                        <div className="absolute -left-[9px] top-2 w-4 h-4 bg-[#84bd00] rounded-full border-2 border-white" />
+                                        <div className="bg-white p-6 rounded-lg shadow-md">
+                                            <h3 className="font-bold text-lg mb-2">{step.title}</h3>
+                                            <p className="text-gray-500 text-sm">{step.desc}</p>
                                         </div>
-                                    ) : (
-                                        <div className="bg-white p-8 rounded-xl shadow-xl w-full max-w-md relative z-10 border-l-4 border-[#84bd00]">
-                                            <h3 className="font-bold text-xl mb-3">{step.title}</h3>
-                                            <p className="text-gray-500 text-sm leading-relaxed">{step.desc}</p>
-                                        </div>
-                                    )}
-                                </div>
-
-                                {/* Center Dot */}
-                                <div className="absolute left-4 md:left-1/2 top-0 md:top-1/2 -translate-x-1/2 md:-translate-y-1/2 w-4 h-4 rounded-full bg-[#84bd00] border-4 border-white shadow-md z-20 hidden md:block"></div>
-
-                                {/* Right Side */}
-                                <div className={`w-full md:w-1/2 flex ${isEven ? 'justify-end md:pl-12' : 'justify-start md:pr-12'} order-1 md:order-2`}>
-                                    {isEven ? (
-                                        <div className="bg-white p-8 rounded-xl shadow-xl w-full max-w-md relative z-10 border-r-4 border-[#84bd00] text-right">
-                                            <h3 className="font-bold text-xl mb-3">{step.title}</h3>
-                                            <p className="text-gray-500 text-sm leading-relaxed">{step.desc}</p>
-                                        </div>
-                                    ) : (
-                                        <div className="md:text-left hidden md:block">
-                                            <span className="text-8xl font-bold text-stroke-1 opacity-20 select-none block leading-none">{step.id}</span>
-                                        </div>
-                                    )}
-                                </div>
-
-                                {/* Mobile View Adjustment */}
-                                <div className="md:hidden w-full pl-4 border-l-2 border-[#84bd00]/30 ml-4 pb-8 relative">
-                                    <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#84bd00] border-2 border-white"></div>
-                                    <span className="text-4xl font-bold text-gray-200 absolute top-0 right-0">{step.id}</span>
-                                    <div className="bg-white p-6 rounded-lg shadow-md mt-2">
-                                        <h3 className="font-bold text-lg mb-2">{step.title}</h3>
-                                        <p className="text-gray-500 text-sm">{step.desc}</p>
                                     </div>
                                 </div>
-                            </div>
-                        );
-                    })}
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
         </section>
