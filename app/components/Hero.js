@@ -6,7 +6,7 @@ export default function Hero() {
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent z-10" />
                 <img
-                    src="/assets/hero-bg.png"
+                    src="/assets/hero.jpeg"
                     alt="Wellness Background"
                     className="w-full h-full object-cover opacity-90"
                 />
@@ -31,23 +31,6 @@ export default function Hero() {
                 </div>
             </div>
 
-            {/* Stats Bar */}
-            <div className="relative z-10 bg-[#84bd00] w-full py-8 md:py-10 text-black">
-                <div className="container-custom grid grid-cols-3 divide-x divide-black/10 text-center">
-                    <div className="px-2 md:px-4">
-                        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black mb-1">100</h3>
-                        <p className="text-[10px] sm:text-xs md:text-sm lg:text-base font-semibold uppercase tracking-wider opacity-80 leading-tight">Life Impacts</p>
-                    </div>
-                    <div className="px-2 md:px-4">
-                        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black mb-1">10+</h3>
-                        <p className="text-[10px] sm:text-xs md:text-sm lg:text-base font-semibold uppercase tracking-wider opacity-80 leading-tight">Personalized Plans</p>
-                    </div>
-                    <div className="px-2 md:px-4">
-                        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black mb-1">97%</h3>
-                        <p className="text-[10px] sm:text-xs md:text-sm lg:text-base font-semibold uppercase tracking-wider opacity-80 leading-tight">User Satisfaction</p>
-                    </div>
-                </div>
-            </div>
         </section>
     );
 }

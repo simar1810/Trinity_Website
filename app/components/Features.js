@@ -1,8 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from 'next/image';
+import middleImage from '@/public/assets/middle.jpeg';
+import logoImage from '@/public/assets/logo.png';
 import { Apple, Brain, Leaf, Zap, Scale, Check, Flame } from 'lucide-react';
 
 export default function Features() {
-    // Data for the 'Classes' section
+    // Data for the 'Classes' sectionj';
     const classes = [
         {
             title: "Balanced Food Diet Mastery",
@@ -51,10 +54,13 @@ export default function Features() {
 
                         {/* Main Image - Fully responsive width, aspect-square for circle */}
                         <div className="hidden md:block relative z-10 w-[85vw] h-[85vw] max-w-[450px] max-h-[450px] rounded-full border-4 md:border-8 border-white shadow-2xl overflow-hidden">
-                            <img
-                                src="/assets/partner-collage.png"
+                            <Image
+                                src={middleImage}
                                 alt="Wellness Partner Collage"
+                                fill
+                                sizes="(max-width: 450px) 100vw, 450px"
                                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                                priority
                             />
                         </div>
 
@@ -182,9 +188,20 @@ export default function Features() {
                         <span className="block text-xs font-bold text-[#84bd00] uppercase tracking-widest mb-2">
                             Why Choose Us
                         </span>
-                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                            Trinity <span className="text-[#84bd00]">Nourishments</span>
-                        </h2>
+
+                        <div className="flex items-center justify-center md:justify-start gap-4 md:gap-6 mb-6">
+                            <Image 
+                                src={logoImage}
+                                alt="Trinity App Logo" 
+                                width={80}
+                                height={80}
+                                className="w-16 h-16 md:w-20 md:h-20 object-contain rounded-full shadow-md border border-[#84bd00] bg-white"
+                                style={{ boxShadow: '0 2px 8px 0 rgba(132,189,0,0.10)' }}
+                            />
+                            <span className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight m-0">
+                                Trinity <span className="text-[#84bd00]">Nourishments</span>
+                            </span>
+                        </div>
                         <p className="text-lg text-gray-600 mb-8 max-w-lg">
                             Choose us for a step-by-step path to success, backed by professionals and a supportive network.
                         </p>

@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import logoImage from '@/public/assets/logo.png';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,8 +21,8 @@ export default function Header() {
       <div className="container-custom flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2 group">
           {/* Logo with white background handled via container */}
-          <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center overflow-hidden transition-transform group-hover:rotate-12 duration-500 shadow-sm">
-            <img src="/assets/App Icon.png" alt="Trinity Nourishments Logo" className="w-full h-full object-contain p-1" />
+          <div className="w-20 h-20 rounded-full flex items-center justify-center overflow-hidden transition-transform group-hover:rotate-12 duration-500">
+            <Image src={logoImage} alt="Trinity Nourishments Logo" className="w-full h-full object-contain p-1" width={80} height={80} />
           </div>
           <span className="text-white text-xl md:text-2xl font-bold tracking-widest uppercase">Trinity Nourishments</span>
         </Link>

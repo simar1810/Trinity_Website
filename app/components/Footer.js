@@ -1,3 +1,6 @@
+import Image from 'next/image';
+import logoImage from '@/public/assets/logo.png';
+
 export default function Footer() {
     return (
         <footer className="bg-[#005c30] text-white py-16 border-t border-white/5">
@@ -5,9 +8,10 @@ export default function Footer() {
 
                 {/* Logo & Info */}
                 <div className="md:w-1/3">
-                    <div className="flex items-center gap-3 mb-6">
-                        <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center overflow-hidden shadow-sm">
-                            <img src="/assets/App Icon.png" alt="Trinity Nourishments Logo" className="w-full h-full object-contain p-1" />
+                    <div className="flex items-center gap-4 mb-6">
+                
+                        <div className="w-20 h-20 rounded-full flex items-center justify-center overflow-hidden transition-transform group-hover:rotate-12 duration-500">
+                            <Image src={logoImage} alt="Trinity Nourishments Logo" className="w-full h-full object-contain p-1" width={80} height={80} />
                         </div>
                         <span className="text-2xl font-extrabold tracking-widest uppercase text-white">Trinity Nourishments</span>
                     </div>
@@ -24,7 +28,7 @@ export default function Footer() {
                     <p className="text-sm mb-6 text-gray-200 hover:text-white transition-colors cursor-pointer">9845185125</p>
 
                     <div className="flex md:justify-end gap-2 mt-4">
-                        <span className="text-xs text-gray-500">Made with ❤️ for Wellness</span>
+                        <span className="text-xs text-gray-500">Made with ❤️ by WellnessZ</span>
                     </div>
                 </div>
             </div>
