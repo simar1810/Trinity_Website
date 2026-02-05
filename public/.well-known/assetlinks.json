@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.wellnessz.trinity",
+      "sha256_cert_fingerprints": [
+        "F5:B7:8E:98:38:24:95:AE:97:71:27:C0:D8:60:74:E7:8A:7C:EA:10:E7:F8:10:B3:2C:4E:51:79:47:4A:F5:31"
+      ]
+    }
+  }
+]
