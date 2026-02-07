@@ -3,7 +3,7 @@ import logoImage from '@/public/assets/logo.png';
 
 export default function Footer() {
     return (
-        <footer className="bg-[#005c30] text-white py-16 border-t border-white/5">
+        <footer id='contact' className="bg-[#005c30] text-white py-16 border-t border-white/5">
             <div className="container-custom flex flex-col md:flex-row justify-between items-start gap-12">
 
                 {/* Logo & Info */}
@@ -28,7 +28,7 @@ export default function Footer() {
                     <p className="text-sm mb-6 text-gray-200 hover:text-white transition-colors cursor-pointer">9845185125</p>
 
                     <div className="flex md:justify-end gap-2 mt-4">
-                        <span className="text-xs text-gray-500">Made with ❤️ by WellnessZ</span>
+                        <span className="text-2xl text-gray-500">Made with ❤️ by WellnessZ</span>
                     </div>
                 </div>
             </div>
