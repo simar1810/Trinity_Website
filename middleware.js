@@ -1,10 +1,10 @@
 import { NextResponse } from 'next/server';
 
 const PLAY_STORE_URL =
-  'https://play.google.com/store/apps/details?id=com.wellnessz.deepika';
+  'https://play.google.com/store/apps/details?id=com.wellnessz.trinity';
 
 const APP_STORE_URL =
-  'https://apps.apple.com/dm/app/arogya-drishti/id6751804335';
+  'https://apps.apple.com/kz/app/trinity-nourishments/id6758000152';
 
 const IOS_REGEX = /iPhone|iPad|iPod/i;
 const ANDROID_REGEX = /Android/i;
