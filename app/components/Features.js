@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from 'next/image';
 import middleImage from '@/public/assets/middle.jpeg';
-import logoImage from '@/public/assets/logo.png';
-import { Apple, Brain, Leaf, Zap, Scale, Check, Flame } from 'lucide-react';
+import { Apple, Brain, Leaf, Scale, Check, Flame } from 'lucide-react';
 
 export default function Features() {
     // Data for the 'Classes' sectionj';
@@ -24,12 +23,6 @@ export default function Features() {
             desc: "Stress impacts both mental and physical health, disrupting sleep, digestion, and overall well-being. Effective stress reduction techniques can improve your health and enhance the success of your nutrition plan.",
             icon: <Leaf className="w-8 h-8 text-[#4dabf7]" />,
             isDark: false,
-        },
-        {
-            title: "Building Vishvoday",
-            desc: "Vishvodaya are the foundation of sustainable wellness. Developing routines that align with your health goals ensures long-term success without falling into the trap of yo-yo dieting or unsustainable practices.",
-            icon: <Zap className="w-8 h-8 text-[#FFC107]" />,
-            isDark: true,
         },
     ];
 
@@ -190,12 +183,12 @@ export default function Features() {
                         </span>
 
                         <div className="flex items-center justify-center md:justify-start gap-4 md:gap-6 mb-6">
-                            <Image 
-                                src={logoImage}
-                                alt="Trinity App Logo" 
+                            <img
+                                src="/assets/logo.png"
+                                alt="Trinity Nourishments Logo"
                                 width={80}
                                 height={80}
-                                className="w-16 h-16 md:w-20 md:h-20 object-contain rounded-full shadow-md border border-[#84bd00] bg-white"
+                                className="w-16 h-16 md:w-20 md:h-20 object-contain rounded-full shadow-md border-2 border-[#84bd00] bg-white p-1"
                                 style={{ boxShadow: '0 2px 8px 0 rgba(132,189,0,0.10)' }}
                             />
                             <span className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight m-0">

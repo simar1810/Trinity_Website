@@ -1,8 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
-import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import logoImage from '@/public/assets/logo.png';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,16 +18,16 @@ export default function Header() {
     <nav className={`fixed w-full z-50 top-0 left-0 transition-all duration-300 ${scrolled ? 'bg-black/80 backdrop-blur-md py-3 shadow-lg' : 'bg-transparent py-5'}`}>
       <div className="container-custom flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2 group">
-          {/* Logo with white background handled via container */}
-          <div className="w-20 h-20 rounded-full flex items-center justify-center overflow-hidden transition-transform group-hover:rotate-12 duration-500">
-            <Image src={logoImage} alt="Trinity Nourishments Logo" className="w-full h-full object-contain p-1" width={80} height={80} />
+          {/* Logo – white circle so logo is visible on dark nav */}
+          <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center overflow-hidden transition-transform group-hover:rotate-12 duration-500 shadow-md flex-shrink-0">
+            <img src="/assets/logo.png" alt="Trinity Nourishments Logo" className="w-full h-full object-contain p-1.5" width={80} height={80} />
           </div>
           <span className="text-white text-xl md:text-2xl font-bold tracking-widest uppercase">Trinity Nourishments</span>
         </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-10">
-          {['Home', 'Contact'].map((item) => (
+          {['Home', 'About', 'Contact'].map((item) => (
             <Link key={item} href={`#${item.toLowerCase()}`} className="text-white/90 hover:text-[#84bd00] transition-colors text-sm uppercase tracking-widest font-medium relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#84bd00] after:transition-all hover:after:w-full">
               {item}
             </Link>
@@ -50,7 +48,7 @@ export default function Header() {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-[#1a1a1a] p-6 flex flex-col gap-6 md:hidden shadow-2xl border-t border-white/10">
-          {['Home', 'Contact'].map((item) => (
+          {['Home', 'About', 'Contact'].map((item) => (
             <Link key={item} href={`#${item.toLowerCase()}`} className="text-white text-lg font-medium hover:text-[#84bd00] text-center" onClick={() => setIsMenuOpen(false)}>
               {item}
             </Link>

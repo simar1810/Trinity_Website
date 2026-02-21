@@ -1,5 +1,4 @@
-import Image from 'next/image';
-import logoImage from '@/public/assets/logo.png';
+/* eslint-disable @next/next/no-img-element */
 
 export default function Footer() {
     return (
@@ -9,9 +8,8 @@ export default function Footer() {
                 {/* Logo & Info */}
                 <div className="md:w-1/3">
                     <div className="flex items-center gap-4 mb-6">
-                
-                        <div className="w-20 h-20 rounded-full flex items-center justify-center overflow-hidden transition-transform group-hover:rotate-12 duration-500">
-                            <Image src={logoImage} alt="Trinity Nourishments Logo" className="w-full h-full object-contain p-1" width={80} height={80} />
+                        <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center overflow-hidden transition-transform group-hover:rotate-12 duration-500 shadow-md flex-shrink-0">
+                            <img src="/assets/logo.png" alt="Trinity Nourishments Logo" className="w-full h-full object-contain p-1.5" width={80} height={80} />
                         </div>
                         <span className="text-2xl font-extrabold tracking-widest uppercase text-white">Trinity Nourishments</span>
                     </div>
