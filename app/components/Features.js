@@ -48,7 +48,7 @@ export default function Features() {
                         {/* Main Image - Fully responsive width, aspect-square for circle */}
                         <div className="hidden md:block relative z-10 w-[85vw] h-[85vw] max-w-[450px] max-h-[450px] rounded-full border-4 md:border-8 border-white shadow-2xl overflow-hidden">
                             <Image
-                                src={middleImage}
+                                src="/assets/coach_help.webp"
                                 alt="Wellness Partner Collage"
                                 fill
                                 sizes="(max-width: 450px) 100vw, 450px"

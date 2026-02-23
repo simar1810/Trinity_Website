@@ -6,7 +6,7 @@ export default function Hero() {
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent z-10" />
                 <img
-                    src="/assets/hero.jpeg"
+                    src="/assets/new_hero.jpeg"
                     alt="Wellness Background"
                     className="w-full h-full object-cover opacity-90"
                 />
